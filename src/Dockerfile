@@ -44,6 +44,8 @@ RUM rm -f rabbitmq-server-3.6.1-1.noarch.rpm
 # install zhihu_spider requirements
 RUN pip install wheel Scrapy pymongo requests celery -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 
+EXPOSE 27017 15672
+
 ENV container docker
 
 CMD ["/usr/sbin/init"]
